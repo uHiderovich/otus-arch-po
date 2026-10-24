@@ -1,6 +1,6 @@
 # Студент отправляет работу на проверку перед дедлайном
 
-```
+```plantuml
 @startuml
 skinparam actorStyle awesome
 
