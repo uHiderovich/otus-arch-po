@@ -2,43 +2,6 @@
 
 ```plantuml
 @startuml
-skinparam actorStyle awesome
-actor "Студент" as Student
-
-participant "Проверка решений" as Check
-participant "Управление историей" as History
-participant "Сторонние сервисы" as External
-participant "Проверка на плагиат" as Pl
-
-Student -> Check : Запросить допроверку попытки
-
-Check -> History : Получить незавершённые проверки
-History --> Check : Проверка на плагиат
-
-Check -> External : Повторить проверку на плагиат
-External -> Pl : Проверить решение
-
-alt Проверка выполнена
-    Pl --> External : Результат
-    External --> Check : Результат
-
-    Check -> History : Сохранить результат допроверки
-    History --> Check : Подтверждение
-
-    Check -> Check : Проверить полноту результатов
-    Check -> Check : Сформировать итоговую оценку
-    Check -->> Student : Уведомление с оценкой
-
-else Сервис снова недоступен
-    External --> Check : Ошибка проверки
-    Check -> History : Зафиксировать ошибку допроверки
-    Check -->> Student : Допроверка не завершена
-end
-@enduml
-```
-
-```plantuml
-@startuml
 title Студент отправляет работу на проверку перед дедлайном
 skinparam actorStyle awesome
 
@@ -103,6 +66,43 @@ alt Дедлайн не наступил
 
 else Дедлайн наступил
     Check --> Student : Отказ в приёме работы
+end
+@enduml
+```
+
+```plantuml
+@startuml
+skinparam actorStyle awesome
+actor "Студент" as Student
+
+participant "Проверка решений" as Check
+participant "Управление историей" as History
+participant "Сторонние сервисы" as External
+participant "Проверка на плагиат" as Pl
+
+Student -> Check : Запросить допроверку попытки
+
+Check -> History : Получить незавершённые проверки
+History --> Check : Проверка на плагиат
+
+Check -> External : Повторить проверку на плагиат
+External -> Pl : Проверить решение
+
+alt Проверка выполнена
+    Pl --> External : Результат
+    External --> Check : Результат
+
+    Check -> History : Сохранить результат допроверки
+    History --> Check : Подтверждение
+
+    Check -> Check : Проверить полноту результатов
+    Check -> Check : Сформировать итоговую оценку
+    Check -->> Student : Уведомление с оценкой
+
+else Сервис снова недоступен
+    External --> Check : Ошибка проверки
+    Check -> History : Зафиксировать ошибку допроверки
+    Check -->> Student : Допроверка не завершена
 end
 @enduml
 ```
