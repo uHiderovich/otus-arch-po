@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="7eOqfttH4j2w2OBC4xbn" name="Page-1">
-        <mxGraphModel dx="2507" dy="3426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1060" pageHeight="1040" math="0" shadow="0" adaptiveColors="auto">
+        <mxGraphModel dx="1102" dy="2088" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1060" pageHeight="1040" math="0" shadow="0" adaptiveColors="auto">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -18,7 +18,7 @@
                     </mxCell>
                 </object>
                 <mxCell id="ext" parent="1" style="swimlane;startSize=32;container=1;collapsible=0;fillColor=#F7F8FA;strokeColor=#94A3B8;html=1;whiteSpace=wrap;fontSize=14;fontColor=#1F2937;" value="Внешние системы · вне нашей системы" vertex="1">
-                    <mxGeometry height="360" width="250" x="650" y="-950" as="geometry"/>
+                    <mxGeometry height="360" width="250" x="730" y="-950" as="geometry"/>
                 </mxCell>
                 <object placeholders="1" c4Name="LMS" c4Type="External Software System" c4Technology="" c4Description="Вход и передача оценок" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;br&gt;[%c4Type%]&lt;br&gt;&lt;br&gt;%c4Description%" id="lms">
                     <mxCell parent="ext" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fontSize=13;resizable=1;" vertex="1">
@@ -37,7 +37,7 @@
                 </object>
                 <object placeholders="1" c4Name="Узел приложений" c4Type="Deployment Node" c4Technology="Linux" c4Description="" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;br&gt;[%c4Type%: %c4Technology%]" id="app">
                     <mxCell parent="1" style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fontSize=13;resizable=1;container=1;verticalAlign=top;spacingTop=10;align=left;" vertex="1">
-                        <mxGeometry height="385" width="550" x="30" y="-585" as="geometry"/>
+                        <mxGeometry height="385" width="610" x="30" y="-585" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Web-сервер / Reverse proxy" c4Type="Infrastructure Node" c4Technology="HTTPS" c4Description="Выдача SPA и вход в Backend API" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;br&gt;[%c4Type%: %c4Technology%]&lt;br&gt;&lt;br&gt;%c4Description%" id="web">
@@ -47,21 +47,27 @@
                 </object>
                 <object placeholders="1" c4Name="Backend API" c4Type="Container Instance" c4Technology="Java" c4Description="HTTP и фоновые обработчики" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;br&gt;[%c4Type%: %c4Technology%]&lt;br&gt;&lt;br&gt;%c4Description%" id="api">
                     <mxCell parent="app" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fontSize=13;resizable=1;" vertex="1">
-                        <mxGeometry height="115" width="245" x="280" y="30" as="geometry"/>
-                    </mxCell>
-                </object>
-                <object placeholders="1" c4Name="Сервис уведомлений" c4Type="Container Instance" c4Technology="Java" c4Description="Получает сообщения из RabbitMQ" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;br&gt;[%c4Type%: %c4Technology%]&lt;br&gt;&lt;br&gt;%c4Description%" id="notify">
-                    <mxCell parent="app" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fontSize=13;resizable=1;" vertex="1">
-                        <mxGeometry height="115" width="245" x="280" y="175" as="geometry"/>
+                        <mxGeometry height="115" width="245" x="350" y="25" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Type="Relationship" c4Technology="HTTP" c4Description="" label="%c4Technology%" id="e2">
-                    <mxCell edge="1" parent="app" source="web" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;metaEdit=1;" target="api">
-                        <mxGeometry relative="1" as="geometry"/>
+                    <mxCell edge="1" parent="app" source="web" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;metaEdit=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" target="api">
+                        <mxGeometry relative="1" x="0.204" as="geometry"/>
                     </mxCell>
                 </object>
                 <mxCell id="appnote" parent="app" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;fontSize=14;fontColor=#1F2937;" value="По 1 экземпляру&lt;br&gt;каждого приложения" vertex="1">
                     <mxGeometry height="50" width="155" x="110" y="315" as="geometry"/>
+                </mxCell>
+                <object placeholders="1" c4Name="Сервис уведомлений" c4Type="Container Instance" c4Technology="Java" c4Description="Получает сообщения из RabbitMQ" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;br&gt;[%c4Type%: %c4Technology%]&lt;br&gt;&lt;br&gt;%c4Description%" id="notify">
+                    <mxCell parent="app" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fontSize=13;resizable=1;" vertex="1">
+                        <mxGeometry height="115" width="245" x="350" y="190" as="geometry"/>
+                    </mxCell>
+                </object>
+                <mxCell id="bVNGwmeFpCV6TRjHxJBm-2" edge="1" parent="app" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;dashed=1;metaEdit=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="notify" value="">
+                    <mxGeometry relative="1" x="-0.1029" as="geometry">
+                        <mxPoint x="524" y="140" as="sourcePoint"/>
+                        <mxPoint x="528" y="590" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <object placeholders="1" c4Name="Узел данных" c4Type="Deployment Node" c4Technology="Linux" c4Description="" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;br&gt;[%c4Type%: %c4Technology%]" id="data">
                     <mxCell parent="1" style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fontSize=13;resizable=1;container=1;verticalAlign=top;spacingTop=10;align=left;" vertex="1">
@@ -87,7 +93,7 @@
                 </object>
                 <object placeholders="1" c4Name="Узел проверок" c4Type="Deployment Node" c4Technology="Linux / Docker Engine" c4Description="" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;br&gt;[%c4Type%: %c4Technology%]" id="runner">
                     <mxCell parent="1" style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fontSize=13;resizable=1;container=1;verticalAlign=top;spacingTop=10;align=left;" vertex="1">
-                        <mxGeometry height="640" width="320" x="660" y="-490" as="geometry"/>
+                        <mxGeometry height="640" width="320" x="700" y="-280" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Исполнитель проверок" c4Type="Container Instance" c4Technology="Java / Docker" c4Description="1 экземпляр на узел" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;br&gt;[%c4Type%: %c4Technology%]&lt;br&gt;&lt;br&gt;%c4Description%" id="worker">
@@ -114,12 +120,14 @@
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Type="Relationship" c4Technology="" c4Description="" label="%c4Technology%" id="e14">
-                    <mxCell edge="1" parent="runner" source="watch" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;metaEdit=1;" target="worker">
-                        <mxGeometry relative="1" as="geometry"/>
+                    <mxCell edge="1" parent="runner" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;metaEdit=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="worker">
+                        <mxGeometry relative="1" x="-0.2414" as="geometry">
+                            <mxPoint x="230" y="440" as="sourcePoint"/>
+                        </mxGeometry>
                     </mxCell>
                 </object>
                 <mxCell id="legend" parent="1" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;fontSize=14;fontColor=#1F2937;" value="C4 Deployment: deploymentNode — среда размещения; containerInstance — экземпляр приложения или хранилища C4.&lt;br&gt;infrastructureNode — вспомогательная инфраструктура. Временные Docker-среды создаются исполнителем.&lt;br&gt;Пунктир — обмен сообщениями. PostgreSQL: SQL/TCP; S3: HTTPS; RabbitMQ: AMQP.&lt;br&gt;Хранилища используют постоянные тома. Резервные копии размещаются вне узла данных.&lt;br&gt;У студенческого кода нет доступа к БД и Docker API. Внешняя сеть отключена." vertex="1">
-                    <mxGeometry height="95" width="1000" x="30" y="190" as="geometry"/>
+                    <mxGeometry height="95" width="1000" x="40" y="390" as="geometry"/>
                 </mxCell>
                 <object placeholders="1" c4Type="Relationship" c4Technology="HTTPS" c4Description="" label="%c4Technology%" id="e1">
                     <mxCell edge="1" parent="1" source="spa" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;metaEdit=1;" target="web">
@@ -130,12 +138,20 @@
                 </object>
                 <object placeholders="1" c4Type="Relationship" c4Technology="SSO / HTTPS" c4Description="" label="%c4Technology%" id="e3">
                     <mxCell edge="1" parent="1" source="spa" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;metaEdit=1;" target="lms">
-                        <mxGeometry relative="1" as="geometry"/>
+                        <mxGeometry relative="1" x="-0.3521" as="geometry">
+                            <mxPoint y="-1" as="offset"/>
+                            <Array as="points">
+                                <mxPoint x="410" y="-783"/>
+                                <mxPoint x="410" y="-865"/>
+                            </Array>
+                        </mxGeometry>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Type="Relationship" c4Technology="HTTPS" c4Description="" label="%c4Technology%" id="e4">
-                    <mxCell edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;metaEdit=1;" target="lms">
-                        <mxGeometry relative="1" as="geometry"/>
+                    <mxCell edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;metaEdit=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" target="lms">
+                        <mxGeometry relative="1" x="-0.434" as="geometry">
+                            <mxPoint as="offset"/>
+                        </mxGeometry>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Type="Relationship" c4Technology="HTTPS" c4Description="" label="%c4Technology%" id="e6">
@@ -144,28 +160,33 @@
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Type="Relationship" c4Technology="" c4Description="" label="%c4Technology%" id="e7">
-                    <mxCell edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;metaEdit=1;" target="pg">
-                        <mxGeometry relative="1" as="geometry"/>
+                    <mxCell edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;metaEdit=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;" target="pg">
+                        <mxGeometry relative="1" x="0.0369" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Type="Relationship" c4Technology="" c4Description="" label="%c4Technology%" id="e8">
-                    <mxCell edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;metaEdit=1;" target="s3">
-                        <mxGeometry relative="1" as="geometry"/>
+                    <mxCell edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;metaEdit=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="s3">
+                        <mxGeometry relative="1" x="-0.1049" as="geometry">
+                            <Array as="points">
+                                <mxPoint x="431.3" y="-410"/>
+                                <mxPoint x="302.5" y="-410"/>
+                            </Array>
+                        </mxGeometry>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Type="Relationship" c4Technology="" c4Description="" label="%c4Technology%" id="e9">
-                    <mxCell edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;dashed=1;metaEdit=1;" target="mq">
-                        <mxGeometry relative="1" as="geometry"/>
+                    <mxCell edge="1" parent="1" source="notify" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;dashed=1;metaEdit=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="mq">
+                        <mxGeometry relative="1" x="-0.1029" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Type="Relationship" c4Technology="" c4Description="" label="%c4Technology%" id="e10">
-                    <mxCell edge="1" parent="1" source="notify" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;dashed=1;metaEdit=1;" target="mq">
+                    <mxCell edge="1" parent="1" source="notify" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;dashed=1;metaEdit=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="mq">
                         <mxGeometry relative="1" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Type="Relationship" c4Technology="" c4Description="" label="%c4Technology%" id="e11">
-                    <mxCell edge="1" parent="1" source="appnote" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;metaEdit=1;" target="pg">
-                        <mxGeometry relative="1" as="geometry"/>
+                    <mxCell edge="1" parent="1" source="appnote" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#64748B;endArrow=blockThin;defaultLabelBackgroundColor=page;metaEdit=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="pg">
+                        <mxGeometry relative="1" x="-0.1386" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Type="Relationship" c4Technology="" c4Description="" label="%c4Technology%" id="e12">
